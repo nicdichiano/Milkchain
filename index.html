@@ -1,0 +1,54 @@
+<!-- Copyright 2020 Google LLC.
+SPDX-License-Identifier: Apache-2.0 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Sign up</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" href="src/css/main.css">
+    <!-- <script src="js/app.js" defer></script> -->
+  </head>  
+
+  <body>
+    
+      
+      <form>
+        
+        <h1>Registrazione</h1>
+        
+        <section>
+          <label>Indirizzo</label>
+          <input type="text" id="indirizzo" name="indirizzo_name">
+        </section>
+        
+        <section>
+          <label>Mansione</label>
+          <input type="text" id="mansione" name="mansione_name">
+        </section>
+        
+        <!-- <section>
+          <label>Password</label>
+          <input>
+        </section> -->
+        
+        <button id="registra" onclick="return false">Registra</button>
+        <button id="elenco" onclick="return false">Elenco registrati</button>
+        
+      </form>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
+    <script src="node_modules/web3/dist/web3.min.js"></script>
+    <script src="node_modules/@truffle/contract/dist/truffle-contract.min.js"></script>
+    <!-- <script type="text/javascript" src="./dist/truffle-contract.min.js"></script> -->
+    <script src="src/js/app.js"></script>
+  </body>
+
+</html>
+
+

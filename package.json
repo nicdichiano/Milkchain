@@ -1,0 +1,25 @@
+{
+  "name": "milkchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "proxy": "http://localhost:5000",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "@truffle/contract": "^4.3.38",
+    "ganache-core": "^2.13.2",
+    "nodemailer": "^4.4.0",
+    "web3": "^1.6.0"
+  }
+}

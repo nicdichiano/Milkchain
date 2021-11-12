@@ -1,0 +1,1406 @@
+{
+  "contractName": "Ischede",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "get_schede",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "progressivo",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "id_allevatore",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "lt_munti",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "id_lotto_munto",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "luogo_mungitura",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "data_mungitura",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct Allevatore",
+              "name": "datiAllevatore",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "idAnalista",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "flagMalattie",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "phLatte",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "esitoTests",
+                  "type": "bool"
+                }
+              ],
+              "internalType": "struct Analista",
+              "name": "analista",
+              "type": "tuple"
+            },
+            {
+              "internalType": "bool",
+              "name": "flagImbot",
+              "type": "bool"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "lottoBotForm",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "dataScadenza",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "nomeForm",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "numForma",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "dataCaseificazione",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "luogoCaseificazione",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "mesiStagionatura",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct formaggio",
+              "name": "forma",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "squadraImbot",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "tipoLatte",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "lottoBotForm",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "dataScadenza",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct bottiglia",
+              "name": "bot",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct schedaLatte[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_progressivo",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "idAnalista",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "flagMalattie",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "phLatte",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "esitoTests",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct Analista",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "name": "aggiornaSchedaAnalisi",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_progressivo",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "squadraImbot",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "tipoLatte",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lottoBotForm",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "dataScadenza",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct bottiglia",
+          "name": "_bot",
+          "type": "tuple"
+        }
+      ],
+      "name": "aggiornaImbot",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_progressivo",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "lottoBotForm",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "dataScadenza",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "nomeForm",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "numForma",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "dataCaseificazione",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "luogoCaseificazione",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "mesiStagionatura",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct formaggio",
+          "name": "_forma",
+          "type": "tuple"
+        }
+      ],
+      "name": "aggiornaCaseificazione",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_progressivo\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"lottoBotForm\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"dataScadenza\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"nomeForm\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"numForma\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"dataCaseificazione\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"luogoCaseificazione\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"mesiStagionatura\",\"type\":\"uint256\"}],\"internalType\":\"struct formaggio\",\"name\":\"_forma\",\"type\":\"tuple\"}],\"name\":\"aggiornaCaseificazione\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_progressivo\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"squadraImbot\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"tipoLatte\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"lottoBotForm\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"dataScadenza\",\"type\":\"string\"}],\"internalType\":\"struct bottiglia\",\"name\":\"_bot\",\"type\":\"tuple\"}],\"name\":\"aggiornaImbot\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_progressivo\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"idAnalista\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"flagMalattie\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"phLatte\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"esitoTests\",\"type\":\"bool\"}],\"internalType\":\"struct Analista\",\"name\":\"\",\"type\":\"tuple\"}],\"name\":\"aggiornaSchedaAnalisi\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"get_schede\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"progressivo\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"id_allevatore\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"lt_munti\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"id_lotto_munto\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"luogo_mungitura\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"data_mungitura\",\"type\":\"string\"}],\"internalType\":\"struct Allevatore\",\"name\":\"datiAllevatore\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"idAnalista\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"flagMalattie\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"phLatte\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"esitoTests\",\"type\":\"bool\"}],\"internalType\":\"struct Analista\",\"name\":\"analista\",\"type\":\"tuple\"},{\"internalType\":\"bool\",\"name\":\"flagImbot\",\"type\":\"bool\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"lottoBotForm\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"dataScadenza\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"nomeForm\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"numForma\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"dataCaseificazione\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"luogoCaseificazione\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"mesiStagionatura\",\"type\":\"uint256\"}],\"internalType\":\"struct formaggio\",\"name\":\"forma\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"squadraImbot\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"tipoLatte\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"lottoBotForm\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"dataScadenza\",\"type\":\"string\"}],\"internalType\":\"struct bottiglia\",\"name\":\"bot\",\"type\":\"tuple\"}],\"internalType\":\"struct schedaLatte[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces.sol\":\"Ischede\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"project:/contracts/Allevamento.sol\":{\"keccak256\":\"0xabc9e0ec7886524df48c652b23ad7095acbdf6ae79fb2b27af04677447f09b96\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://84adf6852ff7c149b9e97eb52962b14151e2b41d946348ab0a305152546a30ee\",\"dweb:/ipfs/QmVKqbtmuxXtwXY9yY1i1sWdVkLjU9n2pur2qwUfHZw7Vk\"]},\"project:/contracts/analisi.sol\":{\"keccak256\":\"0x8a8589da91e6e0314b6998e10d8eb36502069d8a7a1de7691e63a69c60f83901\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ae8470166fb56d1992c0c6dc8435c2b100f6350069682056288c36189b46b8c\",\"dweb:/ipfs/QmV52mNJBfEveib4DzqQFcwGwf6zdxZhuo2EqZJsDiwig8\"]},\"project:/contracts/interfaces.sol\":{\"keccak256\":\"0xbc7283d3a90b68b2692b4d7c84ad464fce69fa341db54b8b4a0f9299036f19d6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7b548b4da49adb3323a3934a2d641f4f5a0929b83338c446707525a3b34cba18\",\"dweb:/ipfs/QmVQmvEoYhNfCNzDZtJfaxkWheGbvHvAfDUF9ib9NJCSTc\"]},\"project:/contracts/login.sol\":{\"keccak256\":\"0xb4c962347770785052cf429014d2550ded3a1ef067318a452fb32a6366832285\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e82aec0baf41119fd6e4d5d47940380ff1521899485ee76e8675b251a61c9fab\",\"dweb:/ipfs/QmSKCoYSt73c7H7QycHZWiPxT6K2zgyBupEgardFJGmajp\"]},\"project:/contracts/registrazione.sol\":{\"keccak256\":\"0x99418b202fa0086ff3dc6927810999fa6b1c1cb08fbcbf96d04662f86d12f561\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dba9ff6df85f4afd60f31d1085e696c48bf2adc1e9124cae3c59b169b5bdd786\",\"dweb:/ipfs/QmR2KZNvafJg1uWrS8LDQ6nnC1xjyGu1X2dqW7nJ2KSF8v\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport \"./registrazione.sol\";\nimport \"./Allevamento.sol\";\nimport \"./login.sol\";\nimport \"./analisi.sol\";\n\ninterface reg{\n    \n        // function get_registrati() external view returns(Utente[] memory); \n        function register(address indirizzo_utente, string memory mans) external;\n}\n    \ninterface Ischede{\n    function get_schede() external view returns(schedaLatte[] memory);\n    function aggiornaSchedaAnalisi(uint _progressivo,Analista memory) external;\n    function aggiornaImbot(uint _progressivo, bottiglia memory _bot) external;\n    function aggiornaCaseificazione(uint _progressivo, formaggio memory _forma) external;\n    \n}",
+  "sourcePath": "C:\\Users\\Nicola Di Chiano\\Desktop\\azienda_cyber\\Milkchain\\contracts\\interfaces.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces.sol",
+    "exportedSymbols": {
+      "Allevamento": [
+        443
+      ],
+      "Allevatore": [
+        652
+      ],
+      "Analisi": [
+        517
+      ],
+      "Analista": [
+        661
+      ],
+      "Ischede": [
+        563
+      ],
+      "Login": [
+        568
+      ],
+      "Registrazione": [
+        838
+      ],
+      "Utente": [
+        641
+      ],
+      "bottiglia": [
+        670
+      ],
+      "formaggio": [
+        685
+      ],
+      "reg": [
+        531
+      ],
+      "schedaLatte": [
+        702
+      ]
+    },
+    "id": 564,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 519,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:3"
+      },
+      {
+        "absolutePath": "project:/contracts/registrazione.sol",
+        "file": "./registrazione.sol",
+        "id": 520,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 839,
+        "src": "58:29:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/Allevamento.sol",
+        "file": "./Allevamento.sol",
+        "id": 521,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 444,
+        "src": "88:27:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/login.sol",
+        "file": "./login.sol",
+        "id": 522,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 569,
+        "src": "116:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/analisi.sol",
+        "file": "./analisi.sol",
+        "id": 523,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 518,
+        "src": "138:23:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 531,
+        "linearizedBaseContracts": [
+          531
+        ],
+        "name": "reg",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "32434a2e",
+            "id": 530,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "register",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 525,
+                  "mutability": "mutable",
+                  "name": "indirizzo_utente",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 530,
+                  "src": "287:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 524,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 527,
+                  "mutability": "mutable",
+                  "name": "mans",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 530,
+                  "src": "313:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 526,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "313:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:46:3"
+            },
+            "returnParameters": {
+              "id": 529,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "341:0:3"
+            },
+            "scope": 531,
+            "src": "269:73:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 564,
+        "src": "163:181:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 563,
+        "linearizedBaseContracts": [
+          563
+        ],
+        "name": "Ischede",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "d03dc2b7",
+            "id": 538,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get_schede",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 532,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "392:2:3"
+            },
+            "returnParameters": {
+              "id": 537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 536,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 538,
+                  "src": "417:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_schedaLatte_$702_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct schedaLatte[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 534,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 533,
+                        "name": "schedaLatte",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 702,
+                        "src": "417:11:3"
+                      },
+                      "referencedDeclaration": 702,
+                      "src": "417:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_schedaLatte_$702_storage_ptr",
+                        "typeString": "struct schedaLatte"
+                      }
+                    },
+                    "id": 535,
+                    "nodeType": "ArrayTypeName",
+                    "src": "417:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_schedaLatte_$702_storage_$dyn_storage_ptr",
+                      "typeString": "struct schedaLatte[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:22:3"
+            },
+            "scope": 563,
+            "src": "373:66:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "dba1c50b",
+            "id": 546,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "aggiornaSchedaAnalisi",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 544,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 540,
+                  "mutability": "mutable",
+                  "name": "_progressivo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 546,
+                  "src": "475:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 539,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "475:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 543,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 546,
+                  "src": "493:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Analista_$661_memory_ptr",
+                    "typeString": "struct Analista"
+                  },
+                  "typeName": {
+                    "id": 542,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 541,
+                      "name": "Analista",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 661,
+                      "src": "493:8:3"
+                    },
+                    "referencedDeclaration": 661,
+                    "src": "493:8:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Analista_$661_storage_ptr",
+                      "typeString": "struct Analista"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "474:35:3"
+            },
+            "returnParameters": {
+              "id": 545,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "518:0:3"
+            },
+            "scope": 563,
+            "src": "444:75:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "4362825c",
+            "id": 554,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "aggiornaImbot",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 552,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 548,
+                  "mutability": "mutable",
+                  "name": "_progressivo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 554,
+                  "src": "547:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 547,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 551,
+                  "mutability": "mutable",
+                  "name": "_bot",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 554,
+                  "src": "566:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_bottiglia_$670_memory_ptr",
+                    "typeString": "struct bottiglia"
+                  },
+                  "typeName": {
+                    "id": 550,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 549,
+                      "name": "bottiglia",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 670,
+                      "src": "566:9:3"
+                    },
+                    "referencedDeclaration": 670,
+                    "src": "566:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_bottiglia_$670_storage_ptr",
+                      "typeString": "struct bottiglia"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:42:3"
+            },
+            "returnParameters": {
+              "id": 553,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "597:0:3"
+            },
+            "scope": 563,
+            "src": "524:74:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "b3727d04",
+            "id": 562,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "aggiornaCaseificazione",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 560,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 556,
+                  "mutability": "mutable",
+                  "name": "_progressivo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 562,
+                  "src": "635:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 555,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "635:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 559,
+                  "mutability": "mutable",
+                  "name": "_forma",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 562,
+                  "src": "654:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_formaggio_$685_memory_ptr",
+                    "typeString": "struct formaggio"
+                  },
+                  "typeName": {
+                    "id": 558,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 557,
+                      "name": "formaggio",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 685,
+                      "src": "654:9:3"
+                    },
+                    "referencedDeclaration": 685,
+                    "src": "654:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_formaggio_$685_storage_ptr",
+                      "typeString": "struct formaggio"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:44:3"
+            },
+            "returnParameters": {
+              "id": 561,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "687:0:3"
+            },
+            "scope": 563,
+            "src": "603:85:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 564,
+        "src": "350:345:3"
+      }
+    ],
+    "src": "33:662:3"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces.sol",
+    "exportedSymbols": {
+      "Allevamento": [
+        443
+      ],
+      "Allevatore": [
+        652
+      ],
+      "Analisi": [
+        517
+      ],
+      "Analista": [
+        661
+      ],
+      "Ischede": [
+        563
+      ],
+      "Login": [
+        568
+      ],
+      "Registrazione": [
+        838
+      ],
+      "Utente": [
+        641
+      ],
+      "bottiglia": [
+        670
+      ],
+      "formaggio": [
+        685
+      ],
+      "reg": [
+        531
+      ],
+      "schedaLatte": [
+        702
+      ]
+    },
+    "id": 564,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 519,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:3"
+      },
+      {
+        "absolutePath": "project:/contracts/registrazione.sol",
+        "file": "./registrazione.sol",
+        "id": 520,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 839,
+        "src": "58:29:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/Allevamento.sol",
+        "file": "./Allevamento.sol",
+        "id": 521,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 444,
+        "src": "88:27:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/login.sol",
+        "file": "./login.sol",
+        "id": 522,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 569,
+        "src": "116:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/analisi.sol",
+        "file": "./analisi.sol",
+        "id": 523,
+        "nodeType": "ImportDirective",
+        "scope": 564,
+        "sourceUnit": 518,
+        "src": "138:23:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 531,
+        "linearizedBaseContracts": [
+          531
+        ],
+        "name": "reg",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "32434a2e",
+            "id": 530,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "register",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 525,
+                  "mutability": "mutable",
+                  "name": "indirizzo_utente",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 530,
+                  "src": "287:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 524,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 527,
+                  "mutability": "mutable",
+                  "name": "mans",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 530,
+                  "src": "313:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 526,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "313:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:46:3"
+            },
+            "returnParameters": {
+              "id": 529,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "341:0:3"
+            },
+            "scope": 531,
+            "src": "269:73:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 564,
+        "src": "163:181:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 563,
+        "linearizedBaseContracts": [
+          563
+        ],
+        "name": "Ischede",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "d03dc2b7",
+            "id": 538,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get_schede",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 532,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "392:2:3"
+            },
+            "returnParameters": {
+              "id": 537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 536,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 538,
+                  "src": "417:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_schedaLatte_$702_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct schedaLatte[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 534,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 533,
+                        "name": "schedaLatte",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 702,
+                        "src": "417:11:3"
+                      },
+                      "referencedDeclaration": 702,
+                      "src": "417:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_schedaLatte_$702_storage_ptr",
+                        "typeString": "struct schedaLatte"
+                      }
+                    },
+                    "id": 535,
+                    "nodeType": "ArrayTypeName",
+                    "src": "417:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_schedaLatte_$702_storage_$dyn_storage_ptr",
+                      "typeString": "struct schedaLatte[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:22:3"
+            },
+            "scope": 563,
+            "src": "373:66:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "dba1c50b",
+            "id": 546,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "aggiornaSchedaAnalisi",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 544,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 540,
+                  "mutability": "mutable",
+                  "name": "_progressivo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 546,
+                  "src": "475:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 539,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "475:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 543,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 546,
+                  "src": "493:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Analista_$661_memory_ptr",
+                    "typeString": "struct Analista"
+                  },
+                  "typeName": {
+                    "id": 542,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 541,
+                      "name": "Analista",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 661,
+                      "src": "493:8:3"
+                    },
+                    "referencedDeclaration": 661,
+                    "src": "493:8:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Analista_$661_storage_ptr",
+                      "typeString": "struct Analista"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "474:35:3"
+            },
+            "returnParameters": {
+              "id": 545,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "518:0:3"
+            },
+            "scope": 563,
+            "src": "444:75:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "4362825c",
+            "id": 554,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "aggiornaImbot",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 552,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 548,
+                  "mutability": "mutable",
+                  "name": "_progressivo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 554,
+                  "src": "547:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 547,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 551,
+                  "mutability": "mutable",
+                  "name": "_bot",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 554,
+                  "src": "566:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_bottiglia_$670_memory_ptr",
+                    "typeString": "struct bottiglia"
+                  },
+                  "typeName": {
+                    "id": 550,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 549,
+                      "name": "bottiglia",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 670,
+                      "src": "566:9:3"
+                    },
+                    "referencedDeclaration": 670,
+                    "src": "566:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_bottiglia_$670_storage_ptr",
+                      "typeString": "struct bottiglia"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:42:3"
+            },
+            "returnParameters": {
+              "id": 553,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "597:0:3"
+            },
+            "scope": 563,
+            "src": "524:74:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "b3727d04",
+            "id": 562,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "aggiornaCaseificazione",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 560,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 556,
+                  "mutability": "mutable",
+                  "name": "_progressivo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 562,
+                  "src": "635:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 555,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "635:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 559,
+                  "mutability": "mutable",
+                  "name": "_forma",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 562,
+                  "src": "654:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_formaggio_$685_memory_ptr",
+                    "typeString": "struct formaggio"
+                  },
+                  "typeName": {
+                    "id": 558,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 557,
+                      "name": "formaggio",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 685,
+                      "src": "654:9:3"
+                    },
+                    "referencedDeclaration": 685,
+                    "src": "654:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_formaggio_$685_storage_ptr",
+                      "typeString": "struct formaggio"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:44:3"
+            },
+            "returnParameters": {
+              "id": 561,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "687:0:3"
+            },
+            "scope": 563,
+            "src": "603:85:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 564,
+        "src": "350:345:3"
+      }
+    ],
+    "src": "33:662:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-04T11:51:56.304Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

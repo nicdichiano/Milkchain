@@ -1,0 +1,351 @@
+{
+  "contractName": "Login",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/login.sol\":\"Login\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"project:/contracts/Allevamento.sol\":{\"keccak256\":\"0xabc9e0ec7886524df48c652b23ad7095acbdf6ae79fb2b27af04677447f09b96\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://84adf6852ff7c149b9e97eb52962b14151e2b41d946348ab0a305152546a30ee\",\"dweb:/ipfs/QmVKqbtmuxXtwXY9yY1i1sWdVkLjU9n2pur2qwUfHZw7Vk\"]},\"project:/contracts/analisi.sol\":{\"keccak256\":\"0x8a8589da91e6e0314b6998e10d8eb36502069d8a7a1de7691e63a69c60f83901\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ae8470166fb56d1992c0c6dc8435c2b100f6350069682056288c36189b46b8c\",\"dweb:/ipfs/QmV52mNJBfEveib4DzqQFcwGwf6zdxZhuo2EqZJsDiwig8\"]},\"project:/contracts/interfaces.sol\":{\"keccak256\":\"0xbc7283d3a90b68b2692b4d7c84ad464fce69fa341db54b8b4a0f9299036f19d6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7b548b4da49adb3323a3934a2d641f4f5a0929b83338c446707525a3b34cba18\",\"dweb:/ipfs/QmVQmvEoYhNfCNzDZtJfaxkWheGbvHvAfDUF9ib9NJCSTc\"]},\"project:/contracts/login.sol\":{\"keccak256\":\"0xb4c962347770785052cf429014d2550ded3a1ef067318a452fb32a6366832285\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e82aec0baf41119fd6e4d5d47940380ff1521899485ee76e8675b251a61c9fab\",\"dweb:/ipfs/QmSKCoYSt73c7H7QycHZWiPxT6K2zgyBupEgardFJGmajp\"]},\"project:/contracts/registrazione.sol\":{\"keccak256\":\"0x99418b202fa0086ff3dc6927810999fa6b1c1cb08fbcbf96d04662f86d12f561\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dba9ff6df85f4afd60f31d1085e696c48bf2adc1e9124cae3c59b169b5bdd786\",\"dweb:/ipfs/QmR2KZNvafJg1uWrS8LDQ6nnC1xjyGu1X2dqW7nJ2KSF8v\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212203ca3c987fac04bc355e44f3d904c60fcbb8fd93571c3500ebc1eee039617747d64736f6c63430008000033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212203ca3c987fac04bc355e44f3d904c60fcbb8fd93571c3500ebc1eee039617747d64736f6c63430008000033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "116:659:4:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "116:659:4:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"./registrazione.sol\";\nimport \"./interfaces.sol\";\n\n\ncontract Login{\n    \n    // function controlloCredenziali(address _contractAddress,address private_key_sender) external view returns(bool) {   //per ora gli passo la chiave pubblica \n       \n    //     Utente [] memory lista_utenti;\n    //     uint i;\n        \n    //     lista_utenti=reg(_contractAddress).get_registrati();\n        \n    //     for(i=0;i<lista_utenti.length;i++) {\n            \n    //       if (lista_utenti[i].id == private_key_sender){     // in seguito diventa lista_utenti[i].id==chiave pubblica associata a private_key_sender\n    //           return true;\n    //       }\n    //     }\n        \n    //     return false;\n        \n    // }\n}",
+  "sourcePath": "C:\\Users\\Nicola Di Chiano\\Desktop\\azienda_cyber\\Milkchain\\contracts\\login.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/login.sol",
+    "exportedSymbols": {
+      "Allevatore": [
+        652
+      ],
+      "Analista": [
+        661
+      ],
+      "Ischede": [
+        563
+      ],
+      "Login": [
+        568
+      ],
+      "Registrazione": [
+        838
+      ],
+      "Utente": [
+        641
+      ],
+      "bottiglia": [
+        670
+      ],
+      "formaggio": [
+        685
+      ],
+      "reg": [
+        531
+      ],
+      "schedaLatte": [
+        702
+      ]
+    },
+    "id": 569,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 565,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:4"
+      },
+      {
+        "absolutePath": "project:/contracts/registrazione.sol",
+        "file": "./registrazione.sol",
+        "id": 566,
+        "nodeType": "ImportDirective",
+        "scope": 569,
+        "sourceUnit": 839,
+        "src": "57:29:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces.sol",
+        "file": "./interfaces.sol",
+        "id": 567,
+        "nodeType": "ImportDirective",
+        "scope": 569,
+        "sourceUnit": 564,
+        "src": "87:26:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 568,
+        "linearizedBaseContracts": [
+          568
+        ],
+        "name": "Login",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 569,
+        "src": "116:659:4"
+      }
+    ],
+    "src": "32:743:4"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/login.sol",
+    "exportedSymbols": {
+      "Allevatore": [
+        652
+      ],
+      "Analista": [
+        661
+      ],
+      "Ischede": [
+        563
+      ],
+      "Login": [
+        568
+      ],
+      "Registrazione": [
+        838
+      ],
+      "Utente": [
+        641
+      ],
+      "bottiglia": [
+        670
+      ],
+      "formaggio": [
+        685
+      ],
+      "reg": [
+        531
+      ],
+      "schedaLatte": [
+        702
+      ]
+    },
+    "id": 569,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 565,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:4"
+      },
+      {
+        "absolutePath": "project:/contracts/registrazione.sol",
+        "file": "./registrazione.sol",
+        "id": 566,
+        "nodeType": "ImportDirective",
+        "scope": 569,
+        "sourceUnit": 839,
+        "src": "57:29:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces.sol",
+        "file": "./interfaces.sol",
+        "id": 567,
+        "nodeType": "ImportDirective",
+        "scope": 569,
+        "sourceUnit": 564,
+        "src": "87:26:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 568,
+        "linearizedBaseContracts": [
+          568
+        ],
+        "name": "Login",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 569,
+        "src": "116:659:4"
+      }
+    ],
+    "src": "32:743:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {
+    "1234": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0xb987d2a53ec0c0a10f37e5b6feab5196d0e8a4d88f3fc11f480d605cfc7f29f3"
+    },
+    "1634969095508": {
+      "events": {},
+      "links": {},
+      "address": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+      "transactionHash": "0x3d5f7e98f479886a005e78fc03330c458e6df1ec75fa0e8faf5b774e6386a60c"
+    },
+    "1634969610988": {
+      "events": {},
+      "links": {},
+      "address": "0x6eD79Aa1c71FD7BdBC515EfdA3Bd4e26394435cC",
+      "transactionHash": "0x9c25ae0b7e6a07bef8aaaad7020da899765d6dc0c0c22d9df5ab2205857479df"
+    },
+    "1635157130793": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x64b5170ead9c87f0bae7fd8fab6c2271ae9abe7d91f95a7d8d7b6360ab8be533"
+    },
+    "1635242574181": {
+      "events": {},
+      "links": {},
+      "address": "0x988B6CFBf3332FF98FFBdED665b1F53a61f92612",
+      "transactionHash": "0x6b21f60f00bb20ffa4439fa410d76b31b1da613c8552849a30d135891781b671"
+    },
+    "1635408517848": {
+      "events": {},
+      "links": {},
+      "address": "0xA533d8f95Ae9E7EB2C437ba1Abb7C5bDFeb66549",
+      "transactionHash": "0xefe09246b20b1a316862183de1194d5359426565b7d650041b547b0f305749f1"
+    },
+    "1635410985314": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x41e9cfe7a94aa3a8947beb21ce5e5907d9e00aea4390c235b7730cdcfd292564"
+    },
+    "1635431283408": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x2c1c50ac8df5ed422ca01dc3ed5d17b3100432173b1765c31531d1a7861a1638"
+    },
+    "1635432506940": {
+      "events": {},
+      "links": {},
+      "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "transactionHash": "0xf6ea817609d7a277d4da6dcd7516bcfdb2961f63c436eceb1fd8c7f6be9e88ad"
+    },
+    "1635432717981": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x2c1c50ac8df5ed422ca01dc3ed5d17b3100432173b1765c31531d1a7861a1638"
+    },
+    "1635486136892": {
+      "events": {},
+      "links": {},
+      "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "transactionHash": "0x562f5aa525ad6634d59374885d5a2b518d48523cad3b2363a0bd93bea7f1abe3"
+    },
+    "1635489171395": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x6ac85578d99638bae18563e746a3367dd4714acabb4d52ca72a9959cb2f865f6"
+    },
+    "1635495182610": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x6ac85578d99638bae18563e746a3367dd4714acabb4d52ca72a9959cb2f865f6"
+    },
+    "1635573375675": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x6ac85578d99638bae18563e746a3367dd4714acabb4d52ca72a9959cb2f865f6"
+    },
+    "1635575752649": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0xadd781ae13c91ca3fa96207c5f0f39937ced6ead500077d66fd3377bbf62e7e0"
+    },
+    "1635598103025": {
+      "events": {},
+      "links": {},
+      "address": "0x5f8e26fAcC23FA4cbd87b8d9Dbbd33D5047abDE1",
+      "transactionHash": "0x82463fb97acaf474e137e7ac00a2588be8ab362238a55498792f819b04206426"
+    },
+    "1635840718198": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0xb987d2a53ec0c0a10f37e5b6feab5196d0e8a4d88f3fc11f480d605cfc7f29f3"
+    },
+    "1635846472174": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0xb987d2a53ec0c0a10f37e5b6feab5196d0e8a4d88f3fc11f480d605cfc7f29f3"
+    },
+    "1635861331563": {
+      "events": {},
+      "links": {},
+      "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+      "transactionHash": "0xd1c7290a18d27cc810e60d6a7ee22b176b383bb398d2d4091e192b5b3bf510ed"
+    },
+    "1635861473866": {
+      "events": {},
+      "links": {},
+      "address": "0xFC628dd79137395F3C9744e33b1c5DE554D94882",
+      "transactionHash": "0x79afa97349d61ef51f8c58a39bf75a4179f89f94b1eb7f2093e68fc76be080f3"
+    },
+    "1635862043300": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0xb987d2a53ec0c0a10f37e5b6feab5196d0e8a4d88f3fc11f480d605cfc7f29f3"
+    },
+    "1635862111422": {
+      "events": {},
+      "links": {},
+      "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "transactionHash": "0x18ee6c9f2dacf426ee4e0892765a0aeefbb2571e99e5730da0a73903cfa0a182"
+    },
+    "1635862432736": {
+      "events": {},
+      "links": {},
+      "address": "0x6eD79Aa1c71FD7BdBC515EfdA3Bd4e26394435cC",
+      "transactionHash": "0x6c7653366f0916fde8acdfd29f351b0071614e0869a9ea258067b562c4990087"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-04T11:52:04.072Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
